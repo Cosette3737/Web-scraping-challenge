@@ -20,26 +20,44 @@ def scrape_info():
     # Visit nasa.gov
     url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url)
-
     time.sleep(1)
-
-    # Scrape page into Soup
+     # Scrape page into Soup
     html = browser.html
     soup = bs(html, "html.parser")
-
-  
-
     # BONUS: Find the src for the sloth image
     relative_image_path = soup.find_all('img')[1]["src"]
     featured_image_url = url + relative_image_path
-
     # Store data in a dictionary
     image_data = {
         "Mars photo": featured_image_url
     }
-
     # Close the browser after scraping
+    browser.quit()
+     # Return results
+    return image_data
+
+
+
+    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    browser.visit(url)
+    time.sleep(1)
+    # Scrape page into Soup
+    html = browser.html
+    soup = bs(html, "html.parser")
+    # BONUS: Find the src for the sloth image
+    relative_image_path0 = soup.find_all('img')[0]["src"]
+    relative_image_path1 = soup.find_all('img')[1]["src"]
+    relative_image_path2 = soup.find_all('img')[2]["src"]
+    relative_image_path3 = soup.find_all('img')[3]["src"]
+    #featured_image_url = url + relative_image_path
+    # Store data in a dictionary
+    hemisphere_image_data = [
+        {"title": "Valles Marineris Hemisphere", "img_url": "relative_image_path0"},
+        {"title": "Cerberus Hemisphere", "img_url": "relative_image_path1"},
+        {"title": "Schiaparelli Hemisphere", "img_url": "relative_image_path2"},
+        {"title": "Syrtis Major Hemisphere", "img_url": "relative_image_path3"},
+    ]
     browser.quit()
 
     # Return results
-    return image_data
+    return hemisphere_image_data
