@@ -20,24 +20,25 @@
    
   <div class="container-fluid">
     <h2>Latest Mars News</h2>
-    <h3>{{ news_title | safe }}"</h3>
-    <h4>{{ news_p }}</h4>
+    <h3>{{mars.news_title | safe}}"</h3>
+    <h4>{{mars.news_p }}</h4>
   </div>
   <div class="container-fluid"></div>
   <h2>Featured Mars Image</h2>
-  <img src= {{ featured_image_url }} alt="Mars photo"/>
+  <img src= {{mars.featured_image_url}} alt="Mars photo"/>
 </div>
 
  <div class="container-fluid"></div>
   <h2>Mars Facts</h2>
-  {{ results_table }}
+  {{mars.results_table | safe}}
   </div>
 
 
 
       <div class="container-fluid">
       <h2>Mars Hemispheres</h2>
-    {{ hemisphere_image_data }}
+
+    {{mars.hemispheres | safe}}
       </div>
   </div>
 
