@@ -32,37 +32,45 @@
   <div style="background-color: blanchedalmond;">
   <h1><center>Featured Mars Image</center></h1>
   <p style="text-align:center;">
-    <img src= "{{mars.featured_image_url}}" alt="Mars photo" style="width:500px;height:600px;"/>
+    <img src= "{{mars.featured_image_url}}" alt="Mars photo" style="width:300px;height:300px;"/>
   </p>
 </div>
 </div>
 
- <div class="container-fluid" ></div>
+ <div class="container-fluid" >
  <div style= "background-color: tomato;">
-  <h1 style="color:black;"><center>Mars Facts</center></h1>
- 
-  <table style="display:grid;">
-  <table style="width: 100px;">
-  <table style="text-align: center;">
- {{mars.results_table | safe}}
-  </table>
-</table>
-
-  </table>
-  </p>
+  <h1 style="color:black;">Mars Facts</h1>
+   
+      <table style="display:grid;">
+      <table style="width: 100px;">
+      <table style="text-align: center;">
+      {{mars.results_table | safe}}
+      </table>
+      </table>
+      </table>
+    
   </div>
-
+ </div>
 
 
       <div class="container-fluid">
         <div style="background-color: black;">
-      <h2 style="color:tomato;"><center>Mars Hemispheres</center></h2>
-      <h2 style="text-align: right;"></h2>
-      {% for hemispheres in mars.hemispheres %}
-    <figcaption class= "figure-caption text-center"><h4>{{hemispheres.title}}</h4></figcaption>
-    <img class ="figure=img img-fluid my-1" src={{hemispheres.img_url}}>
-    
-    {% endfor %}
+          <h1 style="color:tomato;"><center>Mars Hemispheres</center></h1>
+          <h1 style="text-align: center;"></h1>
+
+          {% for hemispheres in mars.hemispheres %}
+          <div class="row" >
+          <div class=" col-md-offset-4 col-md-6 coll-med-pull-2">
+          <div style="padding-bottom: 20px">
+            <figcaption class= "figure-caption text-left"><h2 style= "color:white;">{{hemispheres.title}}</h2>
+              <h2 style="text-align: left;">
+              </h2>
+            </figcaption>
+            <img class="alignleft" src={{hemispheres.img_url}} style="width:10%;height:10%;" />
+          </div>
+          </div>
+          </div>
+          {% endfor %}
       </div>
       </div>
   </div>
