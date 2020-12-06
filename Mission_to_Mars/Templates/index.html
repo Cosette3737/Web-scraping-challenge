@@ -14,24 +14,41 @@
     <div class="jumbotron text-center" >
       <div class style="background-color: black;">
       <h1 style="color:tomato;"> Mission to Mars</h1>
-      <p>Learn all about the Red Planet</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get the Latest Mars Data!</a></p>
+      <p style="color:tomato;">Learn all about the Red Planet</p>
+      <p><a class="btn btn-light btn-lg" href="/scrape" role="button">Get the Latest Mars Data!</a></p>
+      
     </div>
   </div>
    
   <div class="container-fluid">
+  <div class style="background-color: blanchedalmond;">
     <h2>Latest Mars News</h2>
     <h3>{{mars.news_title | safe}}</h3>
     <h4>{{mars.news_p }}</h4>
   </div>
+</div>
   <div class="container-fluid"></div>
-  <h2>Featured Mars Image</h2>
-  <img src= "{{mars.featured_image_url}}" alt="Mars photo"/>
+  <div style="background-color: blanchedalmond;">
+  <h1><center>Featured Mars Image</center></h1>
+  <p style="text-align:center;">
+    <img src= "{{mars.featured_image_url}}" alt="Mars photo" style="width:500px;height:600px;"/>
+  </p>
+</div>
 </div>
 
  <div class="container-fluid" ></div>
-  <h2>Mars Facts</h2>
-  {{mars.results_table | safe}}
+ <div style= "background-color: tomato;">
+  <h1><center>Mars Facts</center></h1>
+  
+  <h1 style= "text-align: center;">
+  <table style="display:grid;">
+  <table style="width: 100px;">
+  <table style="text-align: center;">
+ {{mars.results_table | safe}}
+  </table>
+  </table>
+  </table>
+  </p>
   </div>
 
 
