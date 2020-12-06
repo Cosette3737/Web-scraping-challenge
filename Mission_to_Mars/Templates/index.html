@@ -11,16 +11,17 @@
 
 <body>
   <div class="container-fluid">
-    <div class="jumbotron text-center">
-      <h1>Mission to Mars</h1>
+    <div class="jumbotron text-center" >
+      <div class style="background-color: black;">
+      <h1 style="color:tomato;"> Mission to Mars</h1>
       <p>Learn all about the Red Planet</p>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get the Latest Mars Data!</a></p>
     </div>
-   
+  </div>
    
   <div class="container-fluid">
     <h2>Latest Mars News</h2>
-    <h3>{{mars.news_title | safe}}"</h3>
+    <h3>{{mars.news_title | safe}}</h3>
     <h4>{{mars.news_p }}</h4>
   </div>
   <div class="container-fluid"></div>
@@ -38,8 +39,8 @@
       <div class="container-fluid">
       <h2>Mars Hemispheres</h2>
 
-    <figcaption class= "text-center"><h3>{{mars.hemispheres.title | safe}} </h3>></figcaption>
-    <img class src="{{mars.hemispheres.img_url | safe}}">
+    <figcaption class= "figure-caption text-center"><h4>{{mars.title}}</h4></figcaption>
+    <img class ="figure=img img-fluid my-1" src={{mars.img_url}}>
       </div>
   </div>
 
