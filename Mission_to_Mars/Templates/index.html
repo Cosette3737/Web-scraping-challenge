@@ -46,7 +46,8 @@
   <table style="text-align: center;">
  {{mars.results_table | safe}}
   </table>
-  </table>
+</table>
+
   </table>
   </p>
   </div>
@@ -57,8 +58,11 @@
         <div style="background-color: black;">
       <h2 style="color:tomato;"><center>Mars Hemispheres</center></h2>
       <h2 style="text-align: right;"></h2>
-    <figcaption class= "figure-caption text-center"><h4>{{mars.title}}</h4></figcaption>
-    <img class ="figure=img img-fluid my-1" src={{mars.img_url}}>
+      {% for hemispheres in mars.hemispheres %}
+    <figcaption class= "figure-caption text-center"><h4>{{hemispheres.title}}</h4></figcaption>
+    <img class ="figure=img img-fluid my-1" src={{hemispheres.img_url}}>
+    
+    {% endfor %}
       </div>
       </div>
   </div>
