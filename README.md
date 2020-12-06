@@ -4,7 +4,9 @@
 
 ![Mars Photo](https://github.com/Cosette3737/Web-scraping-challenge/blob/main/Mission_to_Mars/mars_photo.jpg?raw=true)
 Discover the Red Planet's facts 
+
 See featured images
+
 **And learn all that is MARS**
 
 
