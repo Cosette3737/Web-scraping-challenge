@@ -23,16 +23,16 @@
     <h3>{{ news_title | safe }}"</h3>
     <h4>{{ news_p }}</h4>
   </div>
+  <div class="container-fluid"></div>
+  <h2>Featured Mars Image</h2>
+  <img src= {{ featured_image_url }} alt="Mars photo"/>
+</div>
 
-    <div class="container-fluid"></div>
-    <h2>Featured Mars Image</h2>
-    <img src= {{ featured_image_url }} alt="Mars photo"/>
+ <div class="container-fluid"></div>
+  <h2>Mars Facts</h2>
+  {{ results_table }}
   </div>
 
-   <div class="container-fluid"></div>
-    <h2>Mars Facts</h2>
-    {{ results_table }}
-    </div>
 
 
       <div class="container-fluid">
